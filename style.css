@@ -1,0 +1,369 @@
+/* Global Reset + Base Settings (Compliant with Courseware) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f5f0; /* Hong Kong retro cream background */
+    color: #2d3748;
+    line-height: 1.7;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-image: url('https://picsum.photos/id/175/1200/800');
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: soft-light;
+}
+
+/* Heading Hierarchy (Clear Semantics - Courseware Requirement) */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #c52233; /* Hong Kong brick red */
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1e3a8a; /* Deep blue */
+    margin: 40px 0 25px;
+    letter-spacing: 0.3px;
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #c52233;
+    margin-bottom: 18px;
+    font-family: 'Courier New', monospace; /* Retro typography */
+}
+
+p {
+    font-size: 1.05rem;
+    color: #4a5568;
+    margin-bottom: 18px;
+}
+
+/* Hyperlink Style (Elegant Hover Effect) */
+a {
+    text-decoration: none;
+    color: #1e3a8a;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+a:hover {
+    color: #c52233;
+    border-bottom: 1px solid #c52233;
+}
+
+/* Header: Retro Hong Kong Style */
+.page-header {
+    text-align: center;
+    padding: 60px 0;
+    background: linear-gradient(135deg, #1e3a8a 0%, #2d3748 100%);
+    color: white;
+    border-radius: 0 0 30px 30px;
+    margin-bottom: 50px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.hk-retro-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fde68a; /* Soft yellow */
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+    font-family: 'Arial Black', Gadget, sans-serif;
+}
+
+.page-header h1 {
+    color: white;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    color: white;
+    margin: 0;
+}
+
+/* Section Title: Retro Decoration */
+.section-title {
+    display: inline-block;
+    border-bottom: 3px solid #c52233;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.section-title::before, .section-title::after {
+    content: '❖';
+    color: #c52233;
+    margin: 0 8px;
+}
+
+/* Attraction Cards: Elegant Retro Design with Hover Lift */
+.spot-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 35px;
+    margin-bottom: 50px;
+}
+
+.spot-item {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    border: 1px solid #e2e8f0;
+    position: relative;
+}
+
+.hk-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #fde68a;
+    color: #1e3a8a;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.spot-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    border-color: #c52233;
+}
+
+/* Base Image Style */
+.spot-img, .multi-img {
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease; /* Smooth dynamic transition */
+    border: 4px solid #f9f5f0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.spot-img {
+    height: 220px;
+    margin-bottom: 20px;
+}
+
+.multi-img {
+    height: 180px;
+    margin: 0 8px 15px;
+    display: inline-block;
+    width: 18%; /* Fit 5 images in a row */
+}
+
+/* ---------------------- Dynamic Image Effects (Referencing Code Example) ---------------------- */
+/* 1. Rounded Image (50% border-radius) */
+.img-rounded {
+    border-radius: 50%;
+}
+
+.img-rounded:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(229, 62, 62, 0.3);
+}
+
+/* 2. Rounded Corner Image (30px border-radius) */
+.img-rounded-corner {
+    border-radius: 30px;
+}
+
+.img-rounded-corner:hover {
+    border-radius: 10px;
+    transform: scale(1.05);
+}
+
+/* 3. Transparent Image (0.8 opacity) */
+.img-transparent {
+    opacity: 0.8;
+}
+
+.img-transparent:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    filter: contrast(1.1);
+}
+
+/* 4. Grayscale Image (70% grayscale) */
+.img-grayscale {
+    filter: grayscale(70%);
+}
+
+.img-grayscale:hover {
+    filter: grayscale(0);
+    transform: scale(1.05);
+}
+
+/* 5. Blur Image (3px blur) */
+.img-blur {
+    filter: blur(3px);
+}
+
+.img-blur:hover {
+    filter: blur(0);
+    transform: scale(1.05);
+}
+
+/* ------------------------------------------------------------------------------------------- */
+
+/* Travel Route: Polished List Style */
+.travel-route {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+    margin-bottom: 50px;
+    border-left: 4px solid #1e3a8a;
+}
+
+.route-order, .route-unorder {
+    margin-left: 30px;
+    margin-bottom: 25px;
+}
+
+.route-order li {
+    padding: 9px 0;
+    font-size: 1.05rem;
+    color: #2d3748;
+    list-style-type: decimal;
+}
+
+.route-unorder li {
+    padding: 9px 0;
+    font-size: 1.05rem;
+    color: #4a5568;
+    list-style-type: disc;
+}
+
+/* Transportation Guide: Clean Layout */
+.traffic-guide {
+    margin-bottom: 50px;
+}
+
+.traffic-list {
+    margin-left: 30px;
+}
+
+.traffic-list li {
+    padding: 9px 0;
+    font-size: 1.05rem;
+    color: #4a5568;
+}
+
+/* Multimedia Module: Responsive Image Group */
+.multimedia {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+    margin-bottom: 50px;
+    text-align: center;
+    border-top: 4px solid #fde68a;
+}
+
+.img-group {
+    margin-bottom: 35px;
+    overflow-x: auto; /* Horizontal scroll for small screens */
+    padding: 10px 0;
+}
+
+/* YouTube Video: Elegant Frame with Hover Effect */
+iframe {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    max-width: 100%;
+    transition: all 0.3s ease;
+}
+
+iframe:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Footer: Retro Hong Kong Style */
+.page-footer {
+    text-align: center;
+    padding: 35px 0;
+    color: #718096;
+    border-top: 1px solid #e2e8f0;
+    margin-top: 30px;
+    font-size: 0.95rem;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 20px 20px 0 0;
+}
+
+.hk-footer-tag {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+
+.hk-small-print {
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #a0aec0;
+}
+
+/* Responsive Layout (Fully Adaptive - Technical Performance Requirement) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.1rem;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    .spot-img {
+        height: 190px;
+    }
+    .multi-img {
+        width: 45%; /* 2 images per row on tablet */
+        margin: 0 4px 15px;
+        height: 150px;
+    }
+    iframe {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header {
+        padding: 45px 0;
+    }
+    .hk-retro-logo {
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+    }
+    .spot-item, .travel-route, .multimedia {
+        padding: 20px;
+    }
+    .spot-img {
+        height: 160px;
+    }
+    .multi-img {
+        width: 90%; /* 1 image per row on mobile */
+        height: 140px;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+}
